@@ -6,9 +6,11 @@ CREATE TABLE CUSTOMER (
 	name VARCHAR(64),
 	birthday VARCHAR(64), 
 	gender VARCHAR(64), 
-	job VARCHAR(64) 
+	job VARCHAR(64),
+	createDate DATETIME,
+	isDeleted INT 
 ) DEFAULT CHARACTER SET UTF8 COLLATE utf8_general_ci;
 
-insert into customer values (1, 'https://placeimg.com/64/64/1', '홍길동', '960508', '남자', '대학생'); 
-insert into customer values (1, 'https://placeimg.com/64/64/2', '선동렬', '800408', '남자', '프로그래머'); 
-insert into customer values (1, 'https://placeimg.com/64/64/3', '김연아', '700508', '여자', '디지이너'); 
+insert into customer values (1, 'https://placeimg.com/64/64/1', '홍길동', '960508', '남자', '대학생', NOW(), 0); 
+insert into customer values (1, 'https://placeimg.com/64/64/2', '선동렬', '800408', '남자', '프로그래머', NOW(), 0); 
+insert into customer values (1, 'https://placeimg.com/64/64/3', '김연아', '700508', '여자', '디지이너', NOW(), 0); 
